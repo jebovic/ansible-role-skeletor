@@ -29,6 +29,7 @@
     - ROLE_NAME.conf
   notify:
     - restart ROLE_NAME
+  tags: ROLE_NAME_config
 
 - name: service start
   service:
