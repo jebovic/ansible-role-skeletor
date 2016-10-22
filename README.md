@@ -8,7 +8,7 @@ Install and configure ROLE_NAME
 Role Variables
 --------------
 
-```
+```yaml
 ```
 
 Example Playbook
