@@ -1,0 +1,10 @@
+---
+
+# ROLE_NAME install configuration
+ROLE_NAME_apt_key_url: ""
+ROLE_NAME_apt_repositories: []
+ROLE_NAME_packages:
+  - ROLE_NAME
+ROLE_NAME_daemon:
+
+# ROLE_NAME basic configuration

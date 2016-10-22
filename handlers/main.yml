@@ -1,0 +1,6 @@
+---
+
+- name: restart ROLE_NAME
+  service:
+    name:  "{{ ROLE_NAME_daemon }}"
+    state: restarted

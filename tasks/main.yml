@@ -1,0 +1,39 @@
+---
+
+- name: install key
+  apt_key:
+    url: "{{ ROLE_NAME_apt_key_url }}"
+    state: present
+
+- name: add repos
+  apt_repository:
+    repo: "{{ item }}"
+    state: present
+    update_cache: yes
+  with_items: "{{ ROLE_NAME_apt_repositories }}"
+
+- name: install apt packages
+  apt:
+    name:  "{{ item }}"
+    state:              latest
+    install_recommends: false
+    update_cache:       yes
+    cache_valid_time:   300
+  with_items: "{{ ROLE_NAME_packages }}"
+
+- name: config
+  template:
+    src: "{{ item }}.j2"
+    dest: "/etc/ROLE_NAME/{{ item }}"
+  with_items:
+    - ROLE_NAME.conf
+  notify:
+    - restart ROLE_NAME
+
+- name: service start
+  service:
+    name:  "{{ item }}"
+    state: started
+    enabled: yes
+  with_items:
+    - "{{ ROLE_NAME_daemon }}"
