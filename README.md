@@ -14,11 +14,16 @@ Role Variables
 Example Playbook
 ----------------
 
-```
+```yaml
     - hosts: servers
       roles:
          - { role: jebovic.ROLE_NAME }
 ```
+
+Tags
+----
+
+* ROLE_NAME_config : only update config and restart service
 
 Add slack notifications
 -----------------------
