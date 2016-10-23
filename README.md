@@ -15,9 +15,9 @@ Example Playbook
 ----------------
 
 ```yaml
-    - hosts: servers
-      roles:
-         - { role: jebovic.ROLE_NAME }
+- hosts: servers
+  roles:
+     - { role: jebovic.ROLE_NAME }
 ```
 
 Tags
