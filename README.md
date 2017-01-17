@@ -7,6 +7,11 @@ Install and configure ROLE_NAME
 
 This role is a part of my [OPS project](https://github.com/jebovic/ops), follow this link to see it in action. OPS provides a lot of stuff, like a vagrant file for development VMs, playbooks for roles orchestration, inventory files, examples for roles configuration, ansible configuration file, and many more.
 
+Dependencies
+------------
+
+This role depends on [jebovic.DEP_NAME](https://github.com/jebovic/ansible-DEP_NAME) role to be fully functional
+
 Role Variables
 --------------
 
@@ -20,6 +25,12 @@ Example Playbook
 - hosts: servers
   roles:
      - { role: jebovic.ROLE_NAME }
+```
+
+Example : config
+----------------
+
+```yaml
 ```
 
 Tags
